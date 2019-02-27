@@ -4,11 +4,11 @@
     use Aws\Ssm\SsmClient;
 
     class AWS_SMPS {
-        const VERSION = '1.0.0';
+        const VERSION = '1.0.1';
 
         const STRING = 'String';
-        const STRINGLIST = 'StringList';
-        const SECURESTRING = 'SecureString';
+        const STRING_LIST = 'StringList';
+        const SECURE_STRING = 'SecureString';
 
         public function __construct($region = null, $profile = null) {
             $this->client = new SsmClient([
