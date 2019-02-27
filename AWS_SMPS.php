@@ -18,7 +18,7 @@
             ]);
         }
 
-        public function put($type, $name, $value, $description = null, Array $tags = []) {
+        public function put($type, $name, $value, $description = null, array $tags = []) {
             return $this->client->putParameter([
                 'Overwrite' => true,
                 'Type' => $type,
@@ -29,14 +29,14 @@
             ]);
         }
 
-        public function get(Array $parameters, $with_decryption = true) {
+        public function get(array $parameters, bool $with_decryption = true) {
             return $this->client->getParameters([
                 'Names' => $parameters,
                 'WithDecryption' => $with_decryption
             ]);
         }
 
-        public function get_path($path, $recursive = true, $with_decryption = true) {
+        public function get_path($path, bool $recursive = true, bool $with_decryption = true) {
             return $this->client->getParametersByPath([
                 'Path' => $path,
                 'Recursive' => $recursive,
@@ -44,13 +44,13 @@
             ]);
         }
 
-        public function list(Array $filters = []) {
+        public function list(array $filters = []) {
             return $this->client->describeParameters([
                 'Filters' => $filters
             ]);
         }
 
-        public function delete(Array $parameters) {
+        public function delete(array $parameters) {
             return $this->client->deleteParameters([
                 'Names' => $parameters
             ]);

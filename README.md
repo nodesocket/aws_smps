@@ -9,23 +9,23 @@ constructor($region = null, $profile = null)
 ```
 
 ```
-put($type, $name, $value, $description = null, Array $tags = [])
+put($type, $name, $value, $description = null, array $tags = [])
 ```
 
 ```
-get(Array $parameters, $with_decryption = true)
+get(array $parameters, bool $with_decryption = true)
 ```
 
 ```
-get_path($path, $recursive = true, $with_decryption = true)
+get_path($path, bool $recursive = true, bool $with_decryption = true)
 ```
 
 ```
-list(Array $filters = [])
+list(array $filters = [])
 ```
 
 ```
-delete(Array $parameters)
+delete(array $parameters)
 ```
 
 ## Class constants
