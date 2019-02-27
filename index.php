@@ -2,7 +2,7 @@
     require __DIR__ . '/AWS_SMPS.php';
 
     try {
-        $smps = new AWS_SMPS('eu-central-1', 'aws-profile');
+        $smps = new AWS_SMPS('aws-region', 'aws-profile');
 
         $smps->put(AWS_SMPS::STRING, 'foo-string', 'bar', 'test string parameter');
         $smps->put(AWS_SMPS::STRINGLIST, 'foo-string-list', 'a,b,c,d', 'test string list parameter');
