@@ -43,3 +43,9 @@ AWS_SMPS::STRINGLIST
 ```
 AWS_SMPS::SECURESTRING
 ```
+
+Get the version of `AWS_SMPS`.
+
+```
+AWS_SMPS::VERSION
+```
