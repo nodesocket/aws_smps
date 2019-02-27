@@ -4,21 +4,33 @@ See [index.php](https://github.com/nodesocket/aws_smps/blob/master/index.php) fo
 
 ## API
 
+```
 constructor($region = null, $profile = null)
+```
 
+```
 put($type, $name, $value, $description = null, Array $tags = [])
+```
 
+```
 get(Array $parameters, $with_decryption = true)
+```
 
+```
 get_path($path, $recursive = true, $with_decryption = true)
+```
 
+```
 list(Array $filters = [])
+```
 
+```
 delete(Array $parameters)
+```
 
 ## Class constants
 
-Use the following constants when calling `put` as the function argument `$type`.
+Use the following constants when calling `put()` as the function argument `$type`.
 
 ```
 AWS_SMPS::STRING

@@ -9,8 +9,6 @@
         $smps->put(AWS_SMPS::SECURESTRING, 'foo-secure-string', 'secret', 'test secure string parameter');
         $smps->put(AWS_SMPS::SECURESTRING, '/p/foo-secure-string', 'secret', 'test path secure string parameter');
 
-        $list_all_parameters = $smps->list();
-
         $parameters = $smps->get([
             'foo-string',
             'foo-string-list',
@@ -19,6 +17,8 @@
         ]);
 
         $path_parameter = $smps->get_path('/p');
+
+        $list_all_parameters = $smps->list();
 
         $smps->delete([
             'foo-string',
