@@ -27,5 +27,5 @@
             '/p/foo-secure-string'
         ]);
     } catch(Exception $ex) {
-        echo "Oops! An error occured. " . $ex->getMessage();
+        echo "Oops! An error occurred. " . $ex->getMessage();
     }
