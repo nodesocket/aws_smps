@@ -4,21 +4,21 @@
     use Aws\Ssm\SsmClient;
 
     class AWS_SMPS {
-        const VERSION = '1.0.1';
+        public const VERSION = '2.0.0';
 
-        const STRING = 'String';
-        const STRING_LIST = 'StringList';
-        const SECURE_STRING = 'SecureString';
+        public const STRING = 'String';
+        public const STRING_LIST = 'StringList';
+        public const SECURE_STRING = 'SecureString';
 
-        public function __construct($region = null, $profile = null) {
+        public function __construct(string $region = null, string $profile = null, string $version = 'latest') {
             $this->client = new SsmClient([
-                'version' => 'latest',
+                'version' => $version,
                 'region' => $region,
                 'profile' => $profile
             ]);
         }
 
-        public function put($type, $name, $value, $description = null, array $tags = []) {
+        public function put(string $type, string $name, mixed $value, string $description = null, array $tags = []) {
             return $this->client->putParameter([
                 'Overwrite' => true,
                 'Type' => $type,
@@ -29,18 +29,18 @@
             ]);
         }
 
-        public function get(array $parameters, bool $with_decryption = true) {
+        public function get(array $parameters, bool $withDecryption = true) {
             return $this->client->getParameters([
                 'Names' => $parameters,
-                'WithDecryption' => $with_decryption
+                'WithDecryption' => $withDecryption
             ]);
         }
 
-        public function get_path($path, bool $recursive = true, bool $with_decryption = true) {
+        public function getPath(string $path, bool $recursive = true, bool $withDecryption = true) {
             return $this->client->getParametersByPath([
                 'Path' => $path,
                 'Recursive' => $recursive,
-                'WithDecryption' => $with_decryption
+                'WithDecryption' => $withDecryption
             ]);
         }
 
