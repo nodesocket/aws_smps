@@ -1,9 +1,10 @@
 # AWS Systems Manager Parameter Store _(AWS_SMPS)_ PHP class
 
 Optimized for use with [PHP 8.0](https://www.php.net/releases/8.0/en.php).
-    - [Named argument](https://wiki.php.net/rfc/named_params)
-    - [Type declaration for arguments, return values, class props](https://www.php.net/manual/en/language.types.declarations.php)
-    - [Class prop and method visability](https://www.php.net/manual/en/language.oop5.visibility.php)
+
+ - [Named argument](https://wiki.php.net/rfc/named_params)
+ - [Type declaration for arguments, return values, class props](https://www.php.net/manual/en/language.types.declarations.php)
+ - [Class prop and method visability](https://www.php.net/manual/en/language.oop5.visibility.php)
 
 See [example.php](https://github.com/nodesocket/aws_smps/blob/master/example.php) for a full example.
 
