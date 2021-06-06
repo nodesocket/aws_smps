@@ -9,7 +9,7 @@ constructor(string $region = null, string $profile = null, string $version = 'la
 ```
 
 ```
-put(string $type, string $name, mixed $value, string $description = null, array $tags = [])
+put(string $type, string $name, string $value, string $description = null, array $tags = [])
 ```
 
 ```
