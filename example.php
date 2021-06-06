@@ -4,7 +4,7 @@
     try {
         $profile = getenv('AWS_PROFILE') ?: '';
 
-        # Demo using PHP 8.0 named argument. Order does not matter
+        # Demo using PHP 8.0 named arguments. Order does not matter
         $smps = new AWS_SMPS(profile: $profile, region: 'us-east-2');
 
         $smps->put(AWS_SMPS::STRING, 'foo-string', 'bar', 'test string parameter');

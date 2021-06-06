@@ -4,7 +4,7 @@
     use Aws\Ssm\SsmClient;
 
     class AWS_SMPS {
-        public const VERSION = '2.0.4';
+        public const VERSION = '2.0.5';
 
         public const STRING = 'String';
         public const STRING_LIST = 'StringList';
