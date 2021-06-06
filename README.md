@@ -30,7 +30,7 @@ delete(array $parameters)
 
 ## Class constants
 
-Use the following constants when calling `put()` as the function argument `$type`.
+Use the following class constants when calling `put()` as the function argument `$type`.
 
 ```
 AWS_SMPS::STRING
@@ -44,7 +44,7 @@ AWS_SMPS::STRING_LIST
 AWS_SMPS::SECURE_STRING
 ```
 
-Get the version of `AWS_SMPS` using the constant:
+Get the version of `AWS_SMPS` using the class constant:
 
 ```
 AWS_SMPS::VERSION
