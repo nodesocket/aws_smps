@@ -2,7 +2,10 @@
     require __DIR__ . '/AWS_SMPS.php';
 
     try {
-        $smps = new AWS_SMPS('us-east-2', getenv('AWS_PROFILE'));
+        $profile = getenv('AWS_PROFILE') ?: '';
+
+        # Demo using PHP 8.0 named argument. Order does not matter
+        $smps = new AWS_SMPS(profile: $profile, region: 'us-east-2');
 
         $smps->put(AWS_SMPS::STRING, 'foo-string', 'bar', 'test string parameter');
         $smps->put(AWS_SMPS::STRING_LIST, 'foo-string-list', 'a,b,c,d', 'test string list parameter');
