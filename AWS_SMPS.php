@@ -4,7 +4,7 @@
     use Aws\Ssm\SsmClient;
 
     class AWS_SMPS {
-        public const VERSION = '2.0.2';
+        public const VERSION = '2.0.3';
 
         public const STRING = 'String';
         public const STRING_LIST = 'StringList';
@@ -18,7 +18,7 @@
             ]);
         }
 
-        public function put(string $type, string $name, mixed $value, string $description = null, array $tags = []) {
+        public function put(string $type, string $name, string $value, string $description = null, array $tags = []) {
             return $this->client->putParameter([
                 'Overwrite' => true,
                 'Type' => $type,
